@@ -50,6 +50,7 @@ public class UserRestController {
 	public ResponseEntity<User> updateRecord( @RequestBody User user){
 		
 		// logic
+		service.updateUser(user);
 		 return null;
 	}
 
