@@ -48,4 +48,10 @@ public class UserServiceImpl implements UserService {
 
 	}
 
+	@Override
+	public User updateUser(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

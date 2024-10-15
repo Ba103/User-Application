@@ -13,5 +13,7 @@ public interface UserService {
 	public List<User> getAllUsers();
 
 	public String deleteById(Integer id);
+	
+	public User updateUser(User user);
 
 }
