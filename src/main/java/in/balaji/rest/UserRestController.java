@@ -45,5 +45,9 @@ public class UserRestController {
 		return "delete success";
 
 	}
+	
+	public ResponseEntity<User> updateRecord( @RequestBody User user){
+		 return null;
+	}
 
 }
