@@ -1,8 +1,11 @@
 package in.balaji.rest;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,6 +31,12 @@ public class UserRestController {
 	public ResponseEntity<User> getRoleById(@PathVariable Integer id) {
 		User byId = service.getById(id);
 		return new ResponseEntity<>(byId, HttpStatus.OK);
+	}
+
+	@GetMapping("/users")
+	public ResponseEntity<List<User>> findAllUsers() {
+		List<User> allUsers = service.getAllUsers();
+		return new ResponseEntity<>(allUsers, HttpStatus.OK);
 	}
 
 }
